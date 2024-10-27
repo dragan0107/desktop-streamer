@@ -1,7 +1,7 @@
 const peer = new Peer({
-    host: 'localhost',
-    port: 3000,
-    path: '/peerjs'
+    host: 'desktop-streamer.onrender.com',
+    path: '/peerjs',
+    secure: true
   });
   
   const peerIdDisplay = document.getElementById('peer-id');
