@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PeerJS Screen Sharing App</title>
+</head>
+<body>
+  <h1>PeerJS Screen Sharing</h1>
+<div style="display: flex; gap: 2rem; margin-bottom: 2rem;">
+    <p>Your ID: <span id="peer-id">...</span></p>
+    <button onclick="copyID()">Copy ID</button>
+</div>
+  <input type="text" id="peer-id-input" placeholder="Enter peer ID to connect" />
+  <button id="connect-btn">Connect</button>
+  
+  <div id="chat" style="display: none;">
+    <p>Connected to: <span id="connected-peer-id"></span></p>
+    <button id="share-screen-btn">Share Screen</button>
+    <textarea id="message-box" rows="5" placeholder="Type a message..."></textarea>
+    <button id="send-btn">Send</button>
+    <div id="messages"></div>
+    <video id="screen-video" autoplay playsinline style="display: none; width: 100%;"></video>
+  </div>
+
+  <!-- Include PeerJS library -->
+  <script src="https://cdn.jsdelivr.net/npm/peerjs@1.4.6/dist/peerjs.min.js"></script>
+  <script src="script.js"></script> <!-- Load external JS file -->
+</body>
+</html>
